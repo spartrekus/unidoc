@@ -144,7 +144,7 @@ void makedoc( char *thefile )
                         strncat( mytargetfile , "doc.mrk" , PATH_MAX - strlen( mytargetfile ) - 1);
                         ncp( mytargetfile , thefile );
     	                system( " cd ; unibeam doc.mrk ; pdflatex   -shell-escape --interaction=nonstopmode    doc ; bibtex doc ; pdflatex   -shell-escape --interaction=nonstopmode     doc ; pdflatex    -shell-escape --interaction=nonstopmode     doc " ); 
-    	                system( " cd ;  mupdf doc.pdf " );
+    	                system( " cd ; screen -d -m mupdf doc.pdf " );
      }
 }
 
